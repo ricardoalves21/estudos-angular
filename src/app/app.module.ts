@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './first-component/first-component.component';
-import { ParentDataComponent } from './parent-data/parent-data.component';
-import { DirectivesComponent } from './directives/directives.component';
-import { IfRenderComponent } from './if-render/if-render.component';
+import { FirstComponentComponent } from './components/first-component/first-component.component';
+import { ParentDataComponent } from './components/parent-data/parent-data.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { IfRenderComponent } from './components/if-render/if-render.component';
+import { EventosComponent } from './components/eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { IfRenderComponent } from './if-render/if-render.component';
     FirstComponentComponent,
     ParentDataComponent,
     DirectivesComponent,
-    IfRenderComponent
+    IfRenderComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule,
