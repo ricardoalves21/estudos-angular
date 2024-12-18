@@ -5,13 +5,16 @@
       <tr>
         <th>Nome</th>
         <th>Tipo</th>
+        <th>Age</th>
       </tr>
     </thead>
     <tbody>
       <tr  *ngFor="let animal of animals">
         <td>{{ animal.name }}</td>
         <td>{{ animal.type }}</td>
+        <button (click)="showAge(animal)">Show Age</button>
       </tr>
     </tbody>
   </table>
+  <h3>{{ animalDetails }}</h3>
 </div>
