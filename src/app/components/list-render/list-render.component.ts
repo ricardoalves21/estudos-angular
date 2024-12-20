@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { ListService } from './../../services/list.service';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
@@ -10,16 +11,14 @@ import { Animal } from 'src/app/Animal';
 
 export class ListRenderComponent implements OnInit {
 
-  animals: Animal[] = [
-    {name: "Turca", type: "Dog", age: 2},
-    {name: "Tom", type: "Cat", age: 3},
-    {name: "Frida", type: "Dog", age: 1},
-    {name: "Bob", type: "Horse", age: 4}
-  ]
+  animals: Animal[] = [];
 
   constructor(
-    private listService: ListService
-  ) { }
+    private listService: ListService,
+    private http: HttpClient
+  ) {
+    this.getAnimals();
+   }
 
   ngOnInit(): void {}
 
@@ -31,6 +30,10 @@ export class ListRenderComponent implements OnInit {
 
   removeAnimal(animal: Animal) {
     this.animals = this.listService.remove(this.animals, animal);
+  }
+
+  getAnimals(): void {
+    this.listService.getAll();
   }
 
 }

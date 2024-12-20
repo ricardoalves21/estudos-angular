@@ -1,16 +1,8 @@
-<h1>Hello World Angular</h1>
-<h2>Testando H2</h2>
-<p>Aqui é o componente pai 'app.component.html'</p>
-<div>
-  <a href="#">Meu link do pai</a>
-</div>
-
-<app-first-component></app-first-component>
-<app-parent-data [name]="userName" [userData]="userData"></app-parent-data>
-<app-directives></app-directives>
-<app-if-render></app-if-render>
-<app-eventos></app-eventos>
-<app-emitter></app-emitter>
-<app-list-render></app-list-render>
-<app-pipes></app-pipes>
-<app-two-way-binding></app-two-way-binding>
+<h1>Header</h1>
+<nav>
+  <a routerLink="/">Home</a>
+  <a routerLink="/list">Lista</a>
+  <a routerLink="/binding">Binding</a>
+</nav>
+<router-outlet></router-outlet>
+<h1>Footer</h1>
